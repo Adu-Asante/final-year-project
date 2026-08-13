@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "Voxa",
+    "slug": "voxa",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F7F9FC"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.voxa.interpreter",
+      "infoPlist": {
+        "NSSpeechRecognitionUsageDescription": "Voxa uses speech recognition to interpret Twi and English in real time.",
+        "NSMicrophoneUsageDescription": "Voxa needs your microphone to listen and interpret speech.",
+        "NSCameraUsageDescription": "Voxa uses the camera to detect and translate printed text."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundColor": "#F7F9FC"
+      },
+      "package": "com.voxa.interpreter",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.INTERNET"
+      ]
+    },
+    "plugins": [
+      "expo-camera",
+      "expo-sqlite",
+      [
+        "@react-native-voice/voice",
+        {
+          "microphonePermission": "Allow Voxa to access the microphone for speech recognition.",
+          "speechRecognitionPermission": "Allow Voxa to use speech recognition to interpret Twi and English."
+        }
+      ],
+      "expo-audio",
+      "expo-asset"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "voxa-interpreter"
+      }
+    }
+  }
+}

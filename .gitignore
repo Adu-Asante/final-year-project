@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Environment variables
+.env
+.env.*
+
+# Generated audio
+*.wav
+*.mp3
+*.m4a
+
+# Temporary files
+tmp/
+temp/
+
+# Model caches
+**/cache/
+
+# Python test/cache
+.pytest_cache/
+.mypy_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# Machine learning models
+*.onnx
+*.onnx.json
